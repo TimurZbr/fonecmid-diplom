@@ -10,5 +10,7 @@
   <content>Document.ПоступлениеТоваровУслуг</content>
   <content>Document.ЗаказПокупателя</content>
   <content>Document.РеализацияТоваровУслуг</content>
+  <content>DataProcessor.ВКМ_МассовоеСозданиеАктов</content>
+  <content>Report.ВКМ_АнализВыставленныхАктов</content>
   <parentSubsystem>Subsystem.ПокупкиИПродажи</parentSubsystem>
 </mdclass:Subsystem>
