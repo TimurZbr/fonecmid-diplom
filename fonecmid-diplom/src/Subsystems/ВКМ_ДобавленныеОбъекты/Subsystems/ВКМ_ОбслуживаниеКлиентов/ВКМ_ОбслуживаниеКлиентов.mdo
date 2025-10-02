@@ -9,7 +9,7 @@
   <includeInCommandInterface>true</includeInCommandInterface>
   <content>Document.ВКМ_ОбслуживаниеКлиента</content>
   <content>Catalog.ВКМ_ОбслуживаниеКлиентаПрисоединенныеФайлы</content>
-  <content>Role.ВКМ_ДобавлениеИзменениеДокументовОбслуживанияКлиента</content>
+  <content>Role.ВКМ_ДобавлениеПроведениеДокументовОбслуживанияКлиента</content>
   <content>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы</content>
   <content>Constant.ВКМ_ТокенУправленияТелеграмБотом</content>
   <content>Constant.ВКМ_ИдентификаторГруппыДляОповещения</content>

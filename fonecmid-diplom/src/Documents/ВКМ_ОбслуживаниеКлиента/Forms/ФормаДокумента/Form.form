@@ -573,7 +573,7 @@
         <common>true</common>
       </userVisible>
       <dataPath xsi:type="form:DataPath">
-        <segments>Объект.ВыполненныеРаботы.ФоктическиПотраченоЧасов</segments>
+        <segments>Объект.ВыполненныеРаботы.ФактическиПотраченоЧасов</segments>
       </dataPath>
       <extendedTooltip>
         <name>ВыполненныеРаботыФоктическиПотраченоЧасовРасширеннаяПодсказка</name>
@@ -840,7 +840,22 @@
     <savedData>true</savedData>
   </attributes>
   <commandInterface>
-    <navigationPanel/>
+    <navigationPanel>
+      <cmiFragmentRecord>
+        <command>AccumulationRegister.ВКМ_ВыполненныеКлиентуРаботы.StandardCommand.OpenByRecorder</command>
+        <userVisible/>
+      </cmiFragmentRecord>
+      <cmiFragmentRecord>
+        <command>AccumulationRegister.ВКМ_ВыполненныеСотрудникомРаботы.StandardCommand.OpenByRecorder</command>
+        <userVisible/>
+      </cmiFragmentRecord>
+      <cmiFragmentRecord>
+        <command>CommonCommand.ПрисоединенныеФайлы</command>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+      </cmiFragmentRecord>
+    </navigationPanel>
     <commandBar/>
   </commandInterface>
   <extInfo xsi:type="form:DocumentFormExtInfo">

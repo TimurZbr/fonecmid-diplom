@@ -39,7 +39,7 @@
 	ВКМ_ВыполненныеСотрудникомРаботыОбороты.ЧасовКОплатеОборот КАК ОтработалЧасов,
 	ВКМ_ВыполненныеСотрудникомРаботыОбороты.СуммаКОплатеОборот КАК НачисленнаяСумма
 ИЗ
-	РегистрНакопления.ВКМ_ВыполненныеСотрудникомРаботы.Обороты(,,, Сотрудник = &amp;Сотрудник) КАК
+	РегистрНакопления.ВКМ_ВыполненныеСотрудникомРаботы.Обороты(,,,) КАК
 		ВКМ_ВыполненныеСотрудникомРаботыОбороты</query>
 	</dataSet>
 	<parameter>
@@ -56,7 +56,6 @@
 				<v8:DateFractions>DateTime</v8:DateFractions>
 			</v8:DateQualifiers>
 		</valueType>
-		<value xsi:type="xs:dateTime">2025-09-08T00:00:00</value>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;Период.ДатаНачала</expression>
 	</parameter>
@@ -91,22 +90,14 @@
 		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
 	</parameter>
-	<parameter>
-		<name>Сотрудник</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Сотрудник</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Пользователи</v8:Type>
-		</valueType>
-		<useRestriction>false</useRestriction>
-	</parameter>
 	<settingsVariant>
 		<dcsset:name>Основной</dcsset:name>
-		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Выработка специалистов</v8:content>
+			</v8:item>
+		</dcsset:presentation>
 		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
 			<dcsset:selection>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
@@ -119,17 +110,20 @@
 					<dcsset:field>НачисленнаяСумма</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Сотрудник</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:nil="true"/>
+					<dcsset:userSettingID>2d2d0882-ae6b-4044-92a0-d55a16e8d4df</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
 			<dcsset:dataParameters>
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>Период</dcscor:parameter>
 					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>bfbccfef-8949-467d-b0aa-900d002005dd</dcsset:userSettingID>
-				</dcscor:item>
-				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
-					<dcscor:use>false</dcscor:use>
-					<dcscor:parameter>Сотрудник</dcscor:parameter>
-					<dcsset:userSettingID>71f034aa-7364-4b8b-abd1-14d31301edde</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
 			<dcsset:outputParameters>
@@ -141,6 +135,10 @@
 							<v8:content>Выработка специалиста</v8:content>
 						</v8:item>
 					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
 				</dcscor:item>
 			</dcsset:outputParameters>
 			<dcsset:item xsi:type="dcsset:StructureItemGroup">
